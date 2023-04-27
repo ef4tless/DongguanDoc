@@ -1,0 +1,134 @@
+site_name: 'Dongguan 文档'
+site_url: 'https://docs.riskscanner.io' # *
+site_author: 'Dongguan'
+site_description: 'Dongguan 是企业web应用安全评估系统'
+
+repo_name: 'ef4tless/DongguanDoc'
+repo_url: 'https://github.com/ef4tless/DongguanDoc.git'
+edit_uri: ''
+
+theme:
+  name: 'material'
+  logo: 'img/logo.ico'
+  favicon: 'img/facio.ico'
+  language: 'zh'
+  palette:
+    - scheme: default
+      accent: 'red'
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+    - scheme: slate
+      accent: 'red'
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.indexes
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - search.share
+    - header.autohide
+  font: false
+  custom_dir: 'theme'
+  icon:
+    repo: fontawesome/brands/github
+
+nav:
+  - 总体介绍: index.md
+  - 安装配置:
+      - 快速安装: installation/setup_by_fast.md
+      - 升级文档: installation/upgrade/upgrade.md
+  - 系统架构: system_arch.md
+  - 用户手册:
+      - 使用流程: user_manual/process.md
+      - 系统设置: user_manual/settings.md
+      - 扫描规则: user_manual/rule.md
+      - 云账号: user_manual/account.md
+      - 扫描结果: user_manual/resource.md
+      - 首页: user_manual/dashboard.md
+  - 消息通知:
+      - 开启企业微信通知: tutorial/weixin_settings.md
+      - 开启钉钉消息通知: tutorial/dingtalk_settings.md
+  - 开发文档: dev_manual.md
+  - 合规介绍:
+    - 等级保护2.0: security/grade_protection.md
+  - 常见问题:
+      - 解决云账号校验失败问题(Custodian): question/account.md
+      - 如何自定义规则(Custodian): question/rule.md
+      - 自定义阿里云监控规则示例(Custodian): question/example.md
+      - 自定义漏洞扫描规则(Nuclei): question/nuclei.md
+      - 快速了解AWS扫描规则(Prowler): question/prowler.md
+  - 资源下载: about/download.md
+  - 技术咨询: https://jinshuju.net/f/ARLfRi
+  - 关于我们:
+      - 更新说明: about/changelog.md
+      - 联系我们: about/contact.md
+
+markdown_extensions:
+  - admonition
+  - abbr
+  - attr_list
+  - def_list
+  - footnotes
+  - meta
+  - toc:
+      permalink: ⚓︎
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+      options:
+        custom_icons:
+          - theme/.icons
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.superfences
+  - pymdownx.saneheaders
+  - pymdownx.magiclink:
+      repo_url_shortener: true
+      repo_url_shorthand: true
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.snippets:
+      check_paths: true
+  - pymdownx.tabbed
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+extra:
+  riskscanner:
+    version: v1.6.1
+  search:
+    separator: '[\s\-\.]+'
+    language: 'zh'
+    Content-Encoding: gzip
+  generator: false
+  version:
+    default: master
+    provider: mike
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/ef4tless
+    - icon: fontawesome/solid/envelope
+      link: mailto:963697159@qq.com
+    - icon: fontawesome/brands/skype
+      link: tel://18008239271
+
+extra_css:
+  - css/extra.css
+
+copyright: Copyright &copy; 2023 <a href="https://blog.e4l4.com">洞观</a> All Rights Reserved.
+plugins:
+    - search
+    - macros
